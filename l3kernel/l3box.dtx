@@ -135,8 +135,12 @@
 %     \cs{box_use:N} \meta{box}
 %   \end{syntax}
 %   Inserts the current content of the \meta{box} onto the current
-%   list for typesetting. An error is raised if the variable does
-%   not exist or if it is invalid.
+%   list for typesetting.
+%
+%   For \cs{box_use:c}, if the \texttt{check-declarations} option is in effect,
+%   an error is raised if the variable does not exist or if it is invalid.
+%   For \cs{box_use:N}, no checking is performed and lower-level errors will result
+%   if invalid or non-existent variables are used.
 %   \begin{texnote}
 %     This is the \TeX{} primitive \tn{copy}.
 %   \end{texnote}
@@ -147,8 +151,12 @@
 %     \cs{box_use_drop:N} \meta{box}
 %   \end{syntax}
 %   Inserts the current content of the \meta{box} onto the current
-%   list for typesetting. An error is raised if the variable does
-%   not exist or if it is invalid.
+%   list for typesetting.
+%
+%   For \cs{box_use_drop:c}, if the \texttt{check-declarations} option is in effect,
+%   an error is raised if the variable does not exist or if it is invalid.
+%   For \cs{box_use_drop:N}, no checking is performed and lower-level errors will result
+%   if invalid or non-existent variables are used.
 %
 %   The \meta{box} is then cleared at the group level the
 %   box was set at, \emph{i.e.}~the current content is \enquote{dropped} entirely.
